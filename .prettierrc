@@ -4,5 +4,6 @@
   "printWidth": 95,
   "arrowParens": "avoid",
   "bracketSpacing": true,
-  "endOfLine": "lf"
+  "endOfLine": "lf",
+  "useTabs": true
 }
