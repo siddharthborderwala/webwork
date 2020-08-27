@@ -4,6 +4,11 @@
 			"name": "Siddharth",
 			"age": 19,
 			"id": 1
+		},
+		{
+			"name": "Ada Lovelace",
+			"age": 24,
+			"id": 2
 		}
 	]
 }

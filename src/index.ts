@@ -3,5 +3,10 @@ import { User } from './models/User';
 
 axios.defaults.baseURL = `${process.env.API_URL}`;
 
-const user = new User({ id: 1 });
-user.fetch();
+const user = new User({ name: 'Ada Lovelace', age: 19 });
+
+user.on('save', () => {
+	console.log(user);
+});
+
+user.save();
