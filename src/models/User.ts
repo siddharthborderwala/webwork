@@ -2,6 +2,7 @@ import { Model } from './Model';
 import { Attributes } from './Attributes';
 import { ApiSync } from './ApiSync';
 import { Eventing } from './Eventing';
+import { Collection } from './Collection';
 
 const resourceUrl: string = 'users';
 
@@ -18,5 +19,9 @@ export class User extends Model<UserProps> {
 			new Eventing(),
 			new ApiSync<UserProps>(resourceUrl)
 		);
+	}
+
+	static buildCollection(): Collection<User, UserProps> {
+		return new Collection<User, UserProps>(resourceUrl, User.buildUser);
 	}
 }

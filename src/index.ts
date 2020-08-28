@@ -1,4 +1,5 @@
-import axios from 'axios';
-import { User } from './models/User';
+import { UserForm } from './views/UserForm';
 
-axios.defaults.baseURL = `${process.env.API_URL}`;
+const userForm = new UserForm(document.getElementById('root'));
+
+userForm.render();
